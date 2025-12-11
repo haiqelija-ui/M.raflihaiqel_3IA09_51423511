@@ -1,0 +1,113 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f5f9;
+    transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+.center-box {
+    max-width: 350px;
+    margin: 60px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0002;
+}
+
+body.dark .center-box {
+    background: #333;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0001;
+}
+
+body.dark .card {
+    background: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+body.dark table {
+    background: #333;
+}
+
+th {
+    background: #0d6efd;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background: #f1f8ff;
+}
+
+body.dark tr:nth-child(even) {
+    background: #444;
+}
+
+.btn-primary {
+    background: #0d6efd;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-danger {
+    background: #c62828;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+}
+
+.btn-success {
+    background: #2e7d32;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+
+.total-box {
+    text-align: right;
+}

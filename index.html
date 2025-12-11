@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasir Sederhana haiqel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="loginPage" class="center-box">
+    <h2>Login Kasir</h2>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" class="btn-primary">Login</button>
+    </form>
+    <p id="loginError" class="error">Username atau password salah!</p>
+</div>
+
+<!-- MAIN APP -->
+<div id="appPage" style="display:none;">
+    <div class="topbar">
+        <h2>Aplikasi Kasir haiqel</h2>
+        <button id="darkModeBtn">Dark Mode</button>
+        <button id="logoutBtn" class="btn-danger">Logout</button>
+    </div>
+
+    <!-- FORM INPUT -->
+    <div class="card">
+        <h3>Input Barang</h3>
+        <input type="text" id="nama" placeholder="Nama Barang">
+        <input type="number" id="harga" placeholder="Harga">
+        <input type="number" id="qty" placeholder="Qty">
+        <button id="addBtn" class="btn-primary">Tambah</button>
+        <button id="updateBtn" class="btn-success" style="display:none;">Update</button>
+    </div>
+
+    <!-- TABEL -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Qty</th>
+                <th>Total</th>
+                <th>Aksi</th>
+                <th>Ubah</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <!-- TOTAL + CETAK -->
+    <div class="card total-box">
+        <h3>Total Belanja: <span id="grandTotal">0</span></h3>
+        <h4>Diskon: <span id="diskon">0</span></h4>
+        <h2>Bayar: <span id="bayar">0</span></h2>
+
+        <button id="printBtn" class="btn-success">Cetak Struk (PDF)</button>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
